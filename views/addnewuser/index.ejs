@@ -1,0 +1,46 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="addnewuser/create" class="btn btn-primary new">
+        Create a new User
+      </a>
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= addnewusers.length %> addnewusers.
+        <br>
+      </p>
+    </div>
+      <% for (let i = addnewusers.length-1; i >= 0; i--) {   
+        addnewuser = addnewusers[i];   %>
+
+        <div class="card-deck">
+            <div class="card"  style="width: 18em">
+              <div class="card-body">
+
+          <br> ID: <%=  addnewuser._id %>
+          <br> Email: <%=addnewuser.email%>
+          <br> Given: <%=addnewuser.given%>
+          <br> Family: <%=addnewuser.family%>
+          <br> Street 1: <%=addnewuser.street1%>
+          <br> Street 2: <%=addnewuser.street2 %>
+          <br> City: <%=addnewuser.city %>
+          <br> State: <%=addnewuser.state %>
+          <br> Zip: <%=addnewuser.zip %>
+          <br> Country: <%=addnewuser.country %>
+          <br> URL: <%=addnewuser.url %>
+
+          <hr>
+          <a href="/addnewuser/delete/<%= addnewuser._id  %>" class="card-link" class="btn btn-danger"> Delete </a>
+          <a href="/addnewuser/details/<%= addnewuser._id %>" class="card-link" class="btn btn-info"> Details </a>
+          <a href="/addnewuser/edit/<%= addnewuser._id %>" class="card-link" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+
+      <% } %>
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,41 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+      <a href="addnewplace/create" class="btn btn-primary new">
+        Create a new Place
+      </a>
+
+      <h2>Recent entries</h2>
+      <p>There are
+        <%= addnewplaces.length %> addnewplaces.
+        <br>
+      </p>
+    </div>
+      <% for (let i = addnewplaces.length-1; i >= 0; i--) {   
+        addnewplace = addnewplaces[i];   %>
+
+        <div class="card-deck">
+            <div class="card"  style="width: 18em">
+              <div class="card-body">
+
+          <br> ID: <%=  addnewplace._id %>
+          <br> Address: <%=addnewplace.Address %>
+          <br> City: <%=addnewplace.city %>
+          <br> State: <%=addnewplace.state %>
+          <br> Zip: <%=addnewplace.zip %>
+          <br> Country: <%=addnewplace.country %>
+
+          <hr>
+          <a href="/addnewplace/delete/<%= addnewplace._id  %>" class="card-link" class="btn btn-danger"> Delete </a>
+          <a href="/addnewplace/details/<%= addnewplace._id %>"  class="card-link" class="btn btn-info"> Details </a>
+          <a href="/addnewplace/edit/<%= addnewplace._id %>" class="card-link" class="btn btn-primary"> Edit </a>
+          <hr>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>

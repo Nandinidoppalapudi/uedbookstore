@@ -1,0 +1,24 @@
+[
+  {
+    "_id": 99,
+    "email": "nandini@nwmissouri.edu",
+    "given": "Nandini",
+    "family": "Doppalapudi",
+    "city": "Maryville",
+    "state": "MO",
+    "zip": 64468,
+    "country": "USA",
+    "URL": "https://www.nwmissouri.edu/csis/directory/nandini.htm"
+  },
+  {
+    "_id": 100,
+    "email": "Samanth@nwmissouri.edu",
+    "given": "Gourineni",
+    "family": "Samanth",
+    "city": "Rogers",
+    "state": "MO",
+    "zip": 64468,
+    "country": "USA",
+    "URL": "https://www.nwmissouri.edu/csis/directory/samanth.htm"
+  }
+]

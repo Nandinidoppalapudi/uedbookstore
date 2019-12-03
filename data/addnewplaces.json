@@ -1,0 +1,20 @@
+[
+  {
+    "_id": 99,
+    "address": "1115 N college Dr, Apartment 82",
+        "city": "Maryville",
+        "state": "Missouri",
+        "zip": "64468",
+        "country": "USA"
+  },
+    {
+      "_id": 100,
+      "address": "1115 N college Dr, Apartment 82",
+      "city": "Maryville",
+      "state": "Missouri",
+      "zip": "64468",
+      "country": "USA"
+    }
+
+  ]
+  
