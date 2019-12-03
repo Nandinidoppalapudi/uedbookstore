@@ -1,0 +1,96 @@
+<!-- main - a row holds columns -->
+<div class=row>
+  <div class="col col-xs-12">
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="title" class="form-control" id="title" name="title" value="<%= addnewbook.title %>" required>
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="author" class="form-control" id="author" name="author" value="<%= addnewbook.author %>">
+    </div>
+
+    <div class="form-group">
+      <label for="isbn">ISBN</label>
+      <input type="text" class="form-control" id="isbn" name="isbn" value="<%= addnewbook.isbn %>">
+    </div>
+
+    <div class="form-group">
+      <label for="publisher">Publisher </label>
+      <input type="text" class="form-control" id="publisher" name="publisher" value="<%= addnewbook.publisher %>">
+    </div>
+
+    <div class="form-group">
+      <label for="ratings">Ratings </label>
+      <input type="text" class="form-control" id="ratings" name="ratings" value="<%= addnewbook.ratings %>">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price </label>
+      <input type="price" class="form-control" id="price" name="price" value="<%= addnewbook.price %>">
+    </div>
+
+    <div class="form-group">
+      <label for="language">Language </label>
+      <input type="text" class="form-control" id="language" name="language" value="<%= addnewbook.language %>">
+    </div>
+
+    <div class="form-group">
+      <label for="condition">Condition </label>
+      <input type="text" class="form-control" id="condition" name="condition" value="<%= addnewbook.condition %>">
+    </div>
+
+  </div>
+</div>
+
+ <!-- PUT CLIENT SIDE CODE HERE -->
+<script>
+
+  // function toCurrency(amount) 
+
+  // https://gist.github.com/kylefox/780065
+  function toCurrency(amount) {
+    return "$" + amount.toFixed(2);
+  };
+
+  // function toCurrencyInt(amount) 
+  function toCurrencyInt(amount) {
+    return "$" + amount.toFixed(0);
+  };
+
+  // Add  .toCurrency() method to all Numbers
+  Number.prototype.toCurrency = function () {
+    return toCurrency(this);
+  };
+
+  // Add  .toCurrencyInt() method to all Numbers
+  Number.prototype.toCurrencyInt = function () {
+    return toCurrencyInt(this);
+  };
+
+  function onFormChange() {
+    const newAge = parseFloat($("input[name=age]").val());
+    let price = 75
+    if (newAge == 1) {
+      price = 100
+    }
+    $("#puppyCost").html(price.toCurrencyInt());
+  }
+
+  // window.onload = a function that will call all update functions to display calculated values
+  window.onload = function () {
+    onFormChange();
+  }
+
+  // prevent submission when hitting enter key - optional, but user-friendly 
+  document.forms[0].onkeypress = function (e) {
+    var key = e.charCode || e.keyCode || 0;
+    if (key == 13) {
+      e.preventDefault();
+    }
+  }
+
+// END CLIENT SIDE CODE  (close the script tag)
+</script> 

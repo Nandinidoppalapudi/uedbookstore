@@ -1,0 +1,28 @@
+<br>
+<br>
+<div class="container-fluid">
+  <div class=row>
+    <div class="col col-md-12">
+
+      <h2>Confirm deletion of addnewplace</h2>
+      <br>
+      <br> ID: <%=  addnewplace._id %>
+      <br> Address: <%=addnewplace.Address %>
+      <br> City: <%=addnewplace.city %>
+      <br> State: <%=addnewplace.state %>
+      <br> Zip: <%=addnewplace.zip %>
+      <br> Country: <%=addnewplace.country %>
+      <hr>
+      
+      <form method="get" action="/addnewplace">
+        <input type="submit" value="Return to list" class="btn btn-caution" />
+      </form>
+
+
+      <form method="POST" action="/addnewplace/delete/<%= addnewplace._id %>">
+        <input type="submit" value="Delete this item" class="btn btn-danger pull-right" />
+      </form>
+
+    </div>
+  </div>
+</div>
